@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "dev": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "reinstall": "rm -rf node_modules && npm install && cd ios && rm -rf Pods Podfile.lock && pod install && cd ..",
+    "device": "expo run:ios --device "
   },
   "dependencies": {
     "expo": "~53.0.20",
